@@ -68,10 +68,12 @@ p {
     border-radius: 6px;
     background-color: #32404e;
     transition: background-color 0.3s ease;
+    position: relative;
 }
 
 .commands li:hover {
     background-color: #3e4e5e;
+    cursor: cell;
 }
 
 .subcommands-container {
@@ -102,7 +104,133 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     font-size: 0.8rem;
     color: #9ca3af;
 }
+
+.footer p {
+    width: 28%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a {
+    color: #9ca3af;
+    border-bottom: 1px solid #9ca3af;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fcd34d;
+    border-bottom: 1px solid #fcd34d;
+}
+
+.tooltip {
+    display: none;
+    background-color: #1f2937;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.commands li:hover .tooltip {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* For screens with a maximum width of 1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+      padding: 15px; /* Adjusted padding for medium-sized screens */
+    }
+  
+    h1 {
+      font-size: 2.5rem; /* Decrease font size for the heading */
+    }
+  
+    p {
+      font-size: 1rem; /* Decrease font size for the paragraph */
+    }
+  
+    .subcommands {
+      width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .footer p {
+        width: 60%; /* Adjust width for smaller mobile devices */
+    }
+  }
+  
+  /* For screens with a maximum width of 992px */
+  @media screen and (max-width: 992px) {
+    h1 {
+      font-size: 2rem; /* Decrease font size for smaller desktops and larger tablets */
+    }
+  
+    p {
+      font-size: 1rem; /* Decrease font size for smaller desktops and larger tablets */
+    }
+  
+    .subcommands {
+      width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .footer p {
+        width: 60%; /* Adjust width for smaller mobile devices */
+    }
+  }
+  
+  /* For screens with a maximum width of 768px */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem; /* Adjust font size for tablets and large mobile devices */
+    }
+  
+    p {
+      font-size: 0.9rem; /* Adjust font size for tablets and large mobile devices */
+    }
+  
+    .subcommands {
+      width: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .footer p {
+        width: 80%; /* Adjust width for smaller mobile devices */
+    }
+  }
+  
+  /* For screens with a maximum width of 576px */
+  @media screen and (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem; /* Adjust font size for smaller mobile devices */
+    }
+  
+    .container p {
+        width: 80%; /* Adjust width for smaller mobile devices */
+    }
+
+    p {
+      font-size: 0.8rem; /* Adjust font size for smaller mobile devices */
+    }
+  
+    .subcommands {
+      width: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
+  }
