@@ -99,39 +99,11 @@ p {
     background-color: #253547;
     padding: 20px;
     transition: background-color 0.3s ease;
-    border: 1px solid #fff;
 }
 
 .subcommands:hover {
     background-color: #2f475f;
-}
-
-.subcommands .star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: #fff;
-    animation: sparkle 1.5s infinite linear;
-    display: none;
-}
-
-.subcommands:hover .star {
-    display: block;
-}
-
-@keyframes sparkle {
-    0% {
-        opacity: 0;
-        transform: translateY(-50%);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(50%);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(150%);
-    }
+    border: 1px solid #fff;
 }
 
 .footer {
@@ -170,15 +142,15 @@ p {
 
 .tooltip {
     display: none;
+    position: absolute;
     border: 1px solid #fff;
     width: 100%;
     background-color: #1f2937;
-    color: #ffffff;
+    color: #fff;
     font-size: 0.9rem;
     text-align: center;
     padding: 10px;
     border-radius: 6px;
-    position: absolute;
     z-index: 1;
     bottom: 120%;
     left: 50%;
@@ -196,6 +168,34 @@ p {
     display: block;
     opacity: 1;
     transform: translateX(-50%) translateY(-5px);
+}
+ 
+.commands .tooltip .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: sparkle 1.5s infinite linear;
+    display: none;
+}
+
+.commands li:hover .tooltip .star {
+    display: block;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(150%);
+    }
 }
 
 /* For screens with a maximum width of 1200px */
