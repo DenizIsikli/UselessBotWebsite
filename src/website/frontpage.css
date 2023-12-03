@@ -43,7 +43,11 @@ h3 {
 }
   
 p {
-    width: 30%;
+    width: 35%;
+}
+
+.bot-link:hover {
+    filter: drop-shadow(0 0 5px #fff);
 }
 
 .commands {
@@ -74,6 +78,7 @@ p {
 .commands li:hover {
     background-color: #3e4e5e;
     cursor: cell;
+    filter: drop-shadow(0 0 5px #fff);
 }
 
 .subcommands-container {
@@ -87,16 +92,46 @@ p {
 }
 
 .subcommands {
+    position: relative;
     width: calc(33.33% - 20px);
     border-radius: 10px;
     margin-top: 20px;
     background-color: #253547;
     padding: 20px;
     transition: background-color 0.3s ease;
+    border: 1px solid #fff;
 }
 
 .subcommands:hover {
     background-color: #2f475f;
+}
+
+.subcommands .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: sparkle 1.5s infinite linear;
+    display: none;
+}
+
+.subcommands:hover .star {
+    display: block;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(150%);
+    }
 }
 
 .footer {
@@ -135,10 +170,13 @@ p {
 
 .tooltip {
     display: none;
+    border: 1px solid #fff;
+    width: 100%;
     background-color: #1f2937;
     color: #ffffff;
+    font-size: 0.9rem;
     text-align: center;
-    padding: 8px;
+    padding: 10px;
     border-radius: 6px;
     position: absolute;
     z-index: 1;
@@ -147,6 +185,11 @@ p {
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip b {
+    border-bottom: 1px solid #9ca3af;
+    line-height: 25px;
 }
 
 .commands li:hover .tooltip {
