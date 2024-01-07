@@ -564,6 +564,32 @@ const Frontpage: React.FC = () => {
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !pomodoro
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Starts a pomodoro timer with the given study duration, break duration and cycles<br/><br/>
+                    <b>Usage</b><br/>
+                    !pomodoro [float: study_duration] [float: break_duration] [int: cycles]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li 
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !pomodorostop
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Stops the pomodoro timer<br/><br/>
+                    <b>Usage</b><br/>
+                    !pomodorostop
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
             </ul>
           </div>
           <div className="subcommands">
