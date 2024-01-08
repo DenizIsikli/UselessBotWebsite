@@ -590,6 +590,19 @@ const Frontpage: React.FC = () => {
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+                <li
+                  onMouseEnter={createStars} 
+                  onMouseLeave={removeStars}
+                >
+                  !callduration
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Calculates the duration of your current voice call<br/><br/>
+                    <b>Usage</b><br/>
+                    !callduration
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
             </ul>
           </div>
           <div className="subcommands">
