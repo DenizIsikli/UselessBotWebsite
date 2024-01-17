@@ -558,9 +558,22 @@ const Frontpage: React.FC = () => {
                   !compress
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Compresses a text file<br/><br/>
+                    Compresses any file<br/><br/>
                     <b>Usage</b><br/>
-                    !compress [attachment: .txt]
+                    !compress [attachment: file]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseLeave={removeStars}
+                  onMouseEnter={createStars}
+                >
+                  !decompress
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Decompresses any file<br/><br/>
+                    <b>Usage</b><br/>
+                    !decompress [attachment: file]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
@@ -590,6 +603,11 @@ const Frontpage: React.FC = () => {
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+            </ul>
+          </div>
+          <div className="subcommands">
+            <h2>Command List 7 (HelpEmbed7)</h2>
+            <ul>
                 <li
                   onMouseEnter={createStars} 
                   onMouseLeave={removeStars}
@@ -600,6 +618,19 @@ const Frontpage: React.FC = () => {
                     Calculates the duration of your current voice call<br/><br/>
                     <b>Usage</b><br/>
                     !callduration
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !pdfmerge
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Merges a maximum of 2 PDF files into one<br/><br/>
+                    <b>Usage</b><br/>
+                    !pdfmerge [attachment: pdf_file]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
