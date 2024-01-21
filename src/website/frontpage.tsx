@@ -641,7 +641,7 @@ const Frontpage: React.FC = () => {
                   !website
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Sends a link to the bot's website<br/><br/>
+                    Sends a link to the bots website<br/><br/>
                     <b>Usage</b><br/>
                     !website
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
