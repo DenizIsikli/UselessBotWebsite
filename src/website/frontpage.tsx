@@ -634,6 +634,19 @@ const Frontpage: React.FC = () => {
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !website
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Sends a link to the bot's website<br/><br/>
+                    <b>Usage</b><br/>
+                    !website
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
             </ul>
           </div>
           <div className="subcommands">
