@@ -638,6 +638,19 @@ const Frontpage: React.FC = () => {
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
                 >
+                  !pricerunner
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Retrieves a selection of 20 products from PriceRunner<br/><br/>
+                    <b>Usage</b><br/>
+                    !pricerunner [product name]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
                   !website
                   <span className="tooltip">
                     <b>Description</b><br/>
