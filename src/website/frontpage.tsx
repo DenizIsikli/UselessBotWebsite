@@ -156,9 +156,9 @@ const Frontpage: React.FC = () => {
                   !urban
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Retrieves a selection of 1-5 words from Urban Dictionary that match the provided search query<br/><br/>
+                    Retrieves a selection of 1-5 words from Urban Dictionary that match the provided search query - word amount must be specified<br/><br/>
                     <b>Usage</b><br/>
-                    !urban [amount: default = 1 word] [search query]
+                    !urban [word amount] [search query]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
@@ -195,9 +195,9 @@ const Frontpage: React.FC = () => {
                   !wiki
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Retrieves a selection of 1-5 articles from Wikipedia that match the provided search query<br/><br/>
+                    Retrieves a selection of 1-5 articles from Wikipedia that match the provided search query - article amount must be specified<br/><br/>
                     <b>Usage</b><br/>
-                    !wiki [amount: default = 1 article] [search query]
+                    !wiki [article amount] [search query]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>  
                 </li>
@@ -501,7 +501,7 @@ const Frontpage: React.FC = () => {
                   !translate
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Translates any given text to the target language<br/><br/>
+                    Translates any given text to the target language - Use !languagecode if unsure<br/><br/>
                     <b>Usage</b><br/>
                     !translate [target_lang] [text]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
