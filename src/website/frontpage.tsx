@@ -57,6 +57,17 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
+                !website
+                <span className="tooltip">
+                  <b>Description</b><br/>
+                  Website for the Discord Bot<br/><br/>
+                  {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                </span>
+              </li>
+              <li
+                onMouseEnter={createStars}
+                onMouseLeave={removeStars}
+              >
                 !help1
                 <span className="tooltip">
                   <b>Description</b><br/>
@@ -70,7 +81,7 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
-                !help2: Command List 2
+                !help2
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Second command list<br/><br/>
@@ -83,7 +94,7 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
-                !help3: Command List 3
+                !help3
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Third command list<br/><br/>
@@ -96,7 +107,7 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
-                !help4: Command List 4
+                !help4
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Fourth command list<br/><br/>
@@ -109,7 +120,7 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
-                !help5: Command List 5
+                !help5
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Fifth command list<br/><br/>
@@ -122,7 +133,7 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
-                !help6: Command List 6
+                !help6
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Sixth command list<br/><br/>
@@ -135,7 +146,20 @@ const Frontpage: React.FC = () => {
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
               >
-                !commandlist: Command List Overview
+                !help7
+                <span className="tooltip">
+                  <b>Description</b><br/>
+                  Seventh command list<br/><br/>
+                  <b>Usage</b><br/>
+                  !help6
+                  {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                </span>
+              </li>
+              <li
+                onMouseEnter={createStars}
+                onMouseLeave={removeStars}
+              >
+                !commandlist
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Sends a list of all bot commands<br/><br/>
@@ -644,19 +668,6 @@ const Frontpage: React.FC = () => {
                     Retrieves a selection of 20 products from PriceRunner<br/><br/>
                     <b>Usage</b><br/>
                     !pricerunner [product name]
-                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
-                  </span>
-                </li>
-                <li
-                  onMouseEnter={createStars}
-                  onMouseLeave={removeStars}
-                >
-                  !website
-                  <span className="tooltip">
-                    <b>Description</b><br/>
-                    Sends a link to the bots website<br/><br/>
-                    <b>Usage</b><br/>
-                    !website
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
