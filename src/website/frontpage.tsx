@@ -684,6 +684,19 @@ const Frontpage: React.FC = () => {
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !summyt
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Summarizes a YouTube video using Summarize.tech<br/><br/>
+                    <b>Usage</b><br/>
+                    !summyt [attachment: youtube_url]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
             </ul>
           </div>
           <div className="subcommands">
