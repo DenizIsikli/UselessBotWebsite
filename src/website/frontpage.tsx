@@ -151,7 +151,33 @@ const Frontpage: React.FC = () => {
                   <b>Description</b><br/>
                   Seventh command list<br/><br/>
                   <b>Usage</b><br/>
-                  !help6
+                  !help7
+                  {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                </span>
+              </li>
+              <li
+                onMouseEnter={createStars}
+                onMouseLeave={removeStars}
+              >
+                !help8
+                <span className="tooltip">
+                  <b>Description</b><br/>
+                  Eighth command list<br/><br/>
+                  <b>Usage</b><br/>
+                  !help8
+                  {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                </span>
+              </li>
+              <li
+                onMouseEnter={createStars}
+                onMouseLeave={removeStars}
+              >
+                !admin
+                <span className="tooltip">
+                  <b>Description</b><br/>
+                  Returns an embed with all admin commands<br/><br/>
+                  <b>Usage</b><br/>
+                  !admin
                   {stars.length > 0 && <div className='star-container'>{stars}</div>}
                 </span>
               </li>
@@ -162,7 +188,7 @@ const Frontpage: React.FC = () => {
                 !commandlist
                 <span className="tooltip">
                   <b>Description</b><br/>
-                  Sends a list of all bot commands<br/><br/>
+                  Command list of all bot commands<br/><br/>
                   <b>Usage</b><br/>
                   !commandlist
                   {stars.length > 0 && <div className='star-container'>{stars}</div>}
@@ -171,7 +197,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 1 (HelpEmbed1)</h2>
+            <h2>Command List 1 (!help1)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -241,7 +267,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 2 (HelpEmbed2)</h2>
+            <h2>Command List 2 (!help2)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -311,7 +337,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 3 (HelpEmbed3)</h2>
+            <h2>Command List 3 (!help3)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -381,7 +407,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 4 (HelpEmbed4)</h2>
+            <h2>Command List 4 (!help4)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -477,7 +503,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 5 (HelpEmbed5)</h2>
+            <h2>Command List 5 (!help5)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -547,7 +573,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 6 (HelpEmbed6)</h2>
+            <h2>Command List 6 (!help6)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -630,7 +656,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 7 (HelpEmbed7)</h2>
+            <h2>Command List 7 (!help7)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars} 
@@ -700,7 +726,7 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Side Commands/Files</h2>
+            <h2>Command List 8 (!help8)</h2>
             <ul>
                 <li
                   onMouseEnter={createStars}
@@ -722,7 +748,7 @@ const Frontpage: React.FC = () => {
                   !botpic
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Display the bot's profile picture<br/><br/>
+                    Display the bots profile picture<br/><br/>
                     <b>Usage</b><br/>
                     !botpic
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
@@ -735,7 +761,7 @@ const Frontpage: React.FC = () => {
                   !repo
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Link to the bot's repository<br/><br/>
+                    Link to the bots repository<br/><br/>
                     <b>Usage</b><br/>
                     !repo
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
@@ -744,21 +770,8 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Admin Commands/Files</h2>
+            <h2>Admin Command List 1 (!admin1)</h2>
             <ul>
-                <li
-                  onMouseEnter={createStars}
-                  onMouseLeave={removeStars}
-                >
-                  !admin
-                  <span className="tooltip">
-                    <b>Description</b><br/>
-                    Returns an embed with all admin commands<br/><br/>
-                    <b>Usage</b><br/>
-                    !admin
-                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
-                  </span>
-                </li>
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}  
@@ -768,7 +781,7 @@ const Frontpage: React.FC = () => {
                     <b>Description</b><br/>
                     Deletes the specified amount of messages<br/><br/>
                     <b>Usage</b><br/>
-                    !delete [amount: default = 1 message]
+                    !delete [amount] - Default = 1
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
@@ -779,9 +792,9 @@ const Frontpage: React.FC = () => {
                   !kick
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Kicks the specified member<br/><br/>
+                    Kicks the specified user<br/><br/>
                     <b>Usage</b><br/>
-                    !kick [member]
+                    !kick [user]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
@@ -792,13 +805,85 @@ const Frontpage: React.FC = () => {
                   !reload
                   <span className="tooltip">
                     <b>Description</b><br/>
-                    Reloads all the files of the bot<br/><br/>
+                    Reloads all bot files<br/><br/>
                     <b>Usage</b><br/>
                     !reload
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !mute
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Mutes the specified user<br/><br/>
+                    <b>Usage</b><br/>
+                    !mute [user]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !unmute
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Unmutes the specified user<br/><br/>
+                    <b>Usage</b><br/>
+                    !unmute [user]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
             </ul>
+          </div>
+          <div className="subcommands">
+            <h2>Admin Command List 2 (!admin2)</h2>
+            <ul>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !addrole
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Adds the specified role to the specified user<br/><br/>
+                    <b>Usage</b><br/>
+                    !addrole [role] [user]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !delrole
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Removes the specified role from the specified user<br/><br/>
+                    <b>Usage</b><br/>
+                    !delrole [role] [member]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !createrole
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Creates a new role<br/><br/>
+                    <b>Usage</b><br/>
+                    !createrole [role_name]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+            </ul>
+          </div>
+          <div className="subcommands">
           </div>
         </div>
       </div>
