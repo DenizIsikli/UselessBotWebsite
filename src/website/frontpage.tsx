@@ -767,6 +767,19 @@ const Frontpage: React.FC = () => {
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
                   </span>
                 </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
+                  !afk
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Description: Starts an AFK automation for the specified amount of seconds<br></br>(Type 'afkstop' to stop the timer) - Default = 60<br/><br/>
+                    <b>Usage</b><br/>
+                    !afk
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
             </ul>
           </div>
           <div className="subcommands">

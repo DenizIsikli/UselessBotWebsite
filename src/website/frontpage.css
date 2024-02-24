@@ -161,7 +161,7 @@ p {
 
 .tooltip b {
     border-bottom: 1px solid #9ca3af;
-    line-height: 25px;
+    line-height: 35px;
 }
 
 .commands li:hover .tooltip {
