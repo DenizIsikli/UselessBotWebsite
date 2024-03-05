@@ -771,6 +771,21 @@ const Frontpage: React.FC = () => {
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
                 >
+                  !codeformat
+                  <span className="tooltip">
+                    <b>Description</b><br/>
+                    Formats code based on the given language<br/><br/>
+                    <b>Aliases</b><br/>
+                    cf<br/><br/>
+                    <b>Usage</b><br/>
+                    !codeformat [language] [code]
+                    {stars.length > 0 && <div className='star-container'>{stars}</div>}
+                  </span>
+                </li>
+                <li
+                  onMouseEnter={createStars}
+                  onMouseLeave={removeStars}
+                >
                   !afk
                   <span className="tooltip">
                     <b>Description</b><br/>
@@ -793,6 +808,8 @@ const Frontpage: React.FC = () => {
                   <span className="tooltip">
                     <b>Description</b><br/>
                     Deletes the specified amount of messages<br/><br/>
+                    <b>Aliases</b><br/>
+                    del<br/><br/>
                     <b>Usage</b><br/>
                     !delete [amount] - Default = 1
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
