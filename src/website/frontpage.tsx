@@ -189,6 +189,8 @@ const Frontpage: React.FC = () => {
                 <span className="tooltip">
                   <b>Description</b><br/>
                   Command list of all bot commands<br/><br/>
+                  <b>Aliases</b><br/>
+                  cmdl<br/><br/>
                   <b>Usage</b><br/>
                   !commandlist
                   {stars.length > 0 && <div className='star-container'>{stars}</div>}
@@ -399,6 +401,8 @@ const Frontpage: React.FC = () => {
                   <span className="tooltip">
                     <b>Description</b><br/>
                     Resizes the image attachment based on the given dimensions<br/><br/>
+                    <b>Aliases</b><br/>
+                    rimg<br/><br/>
                     <b>Usage</b><br/>
                     !resize [attachment: image] [width] [height]
                     {stars.length > 0 && <div className='star-container'>{stars}</div>}
