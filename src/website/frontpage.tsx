@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import './frontpage.css';
 import { FaGithub } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
+
+
+const toggleExpand = (id: string) => {
+  const element = document.getElementById(id);
+  const header = element?.previousElementSibling;
+  if (element?.classList.contains('expanded')) {
+    element.classList.remove('expanded');
+    header?.classList.remove('expanded');
+  } else {
+    element?.classList.add('expanded');
+    header?.classList.add('expanded');
+  }
+};
 
 const Frontpage: React.FC = () => {
   const [stars, setStars] = useState<JSX.Element[]>([]);
@@ -40,19 +54,15 @@ const Frontpage: React.FC = () => {
       </p>
 
       <h3>Invite the bot to your server</h3>
-      <a href="https://discord.com/oauth2/authorize?client_id=1136071398993961122&permissions=8&scope=bot" className="bot-link">
-        <img
-          src="https://img.shields.io/static/v1?label=Invite&message=Useless&color=7289DA&style=flat&logo=discord&logoColor=7289DA&labelColor=2C2F33"
-          alt="Invite Useless"
-          className="bot-link-image"
-        />
-      </a>
-
+      <a href="https://discord.com/oauth2/authorize?client_id=1136071398993961122&permissions=8&scope=bot" className="bot-link">Add To Server</a>
       <div className="commands">
         <div className="subcommands-container">
           <div className="subcommands">
-            <h2>General Command List</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('general-command-list')}>
+              General Command List
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="general-command-list">
               <li
                 onMouseEnter={createStars}
                 onMouseLeave={removeStars}
@@ -199,8 +209,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 1 (!help1)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-1')}>
+              Command List 1 (!help1)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-1">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -269,8 +282,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 2 (!help2)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-2')}>
+              Command List 2 (!help2)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-2">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -339,8 +355,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 3 (!help3)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-3')}>
+              Command List 3 (!help3)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-3">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -411,8 +430,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 4 (!help4)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-4')}>
+              Command List 4 (!help4)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-4">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -507,8 +529,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 5 (!help5)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-5')}>
+              Command List 5 (!help5)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-5">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -577,8 +602,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 6 (!help6)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-6')}>
+              Command List 6 (!help6)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-6">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -660,8 +688,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 7 (!help7)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-7')}>
+              Command List 7 (!help7)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-7">
                 <li
                   onMouseEnter={createStars} 
                   onMouseLeave={removeStars}
@@ -730,8 +761,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Command List 8 (!help8)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('command-list-8')}>
+              Command List 8 (!help8)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="command-list-8">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -802,8 +836,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Admin Command List 1 (!admin1)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('admin-command-list-1')}>
+              Admin Command List (!admin)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="admin-command-list-1">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}  
@@ -874,8 +911,11 @@ const Frontpage: React.FC = () => {
             </ul>
           </div>
           <div className="subcommands">
-            <h2>Admin Command List 2 (!admin2)</h2>
-            <ul>
+            <h2 onClick={() => toggleExpand('admin-command-list-2')}>
+              Admin Command List 2 (!admin)
+              <span className="arrow-indicator"><FaArrowDown /></span>
+            </h2>
+            <ul id="admin-command-list-2">
                 <li
                   onMouseEnter={createStars}
                   onMouseLeave={removeStars}
@@ -916,8 +956,6 @@ const Frontpage: React.FC = () => {
                   </span>
                 </li>
             </ul>
-          </div>
-          <div className="subcommands">
           </div>
         </div>
       </div>

@@ -17,18 +17,35 @@ body {
     align-items: center;
     min-height: 100vh;
     width: 100vw;
-    background-color: #1f2937;
+    background-color: #0e1015;
     color: #fff;
     text-align: center;
     padding: 20px;
 }
-  
+
+.bot-link{
+    background-color: #2e323d;
+    border-radius: 3px;
+    font-size: .9rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.bot-link:hover {
+    border: 1px solid #68D391;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #fff);
+}
 
 h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #fcd34d;
+    color: #68D391;
 }
   
 h2 {
@@ -39,15 +56,13 @@ h2 {
   
 h3 {
     font-size: 1.25rem;
+    margin-bottom: 5px;
     color: #9ca3af;
 }
   
 p {
-    width: 35%;
-}
-
-.bot-link:hover {
-    filter: drop-shadow(0 0 5px #fff);
+    width: 40%;
+    line-height: normal;
 }
 
 .commands {
@@ -84,26 +99,82 @@ p {
 .subcommands-container {
     margin: 0 auto;
     padding: 20px;
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
 }
 
 .subcommands {
     position: relative;
-    width: calc(33.33% - 20px);
-    border-radius: 10px;
-    margin-top: 20px;
-    background-color: #253547;
+    background-color: #2D3748;  
+    width: calc(50% - 20px);
+    height: 100%;
+    margin: 0 auto;
     padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    transition: max-height 0.5s ease-out;
+}
+
+.subcommands h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    background-color: #4A5568;
+    color: #68D391;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.subcommands h2:hover {
+    transform: scale(.98);
+    transition: transform 0.2s ease;
+    border: 1px solid #68D391;
+}
+
+.arrow-indicator {
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+    transform: rotate(0deg);
+}
+
+.subcommands h2.expanded .arrow-indicator {
+    transform: rotate(-180deg);
+    filter: drop-shadow(0 0 5px #68D391);
+}
+
+.subcommands h2.expanded {
+    border: 1px solid #68D391;
+}
+
+.subcommands ul {
+    list-style: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.subcommands ul.expanded {
+    max-height: 1000px;    
+}
+
+.subcommands li {
+    background-color: #4A5568;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
     transition: background-color 0.3s ease;
 }
 
-.subcommands:hover {
-    background-color: #2f475f;
-    border: 1px solid #fff;
+.subcommands li:hover {
+    background-color: #718096;
+    transform: scale(.95);
+    transition: transform 0.2s ease;
 }
 
 .footer {
@@ -112,7 +183,7 @@ p {
     align-items: center;
     width: 100%;
     padding: 0px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #9ca3af;
 }
 
@@ -136,27 +207,37 @@ p {
 }
 
 .footer a:hover {
-    color: #fcd34d;
-    border-bottom: 1px solid #fcd34d;
+    color: #68D391;
+    border-bottom: 1px solid #68D391;
 }
 
 .tooltip {
     display: none;
     position: absolute;
+    transform: translateX(-10%);
+    transition: opacity 0.2s, transform 0.2s;
+    background-color: #1f2937;
     border: 1px solid #fff;
     width: 100%;
-    background-color: #1f2937;
+    bottom: 120%;
+    z-index: 1;
     color: #fff;
     font-size: 0.9rem;
     text-align: center;
     padding: 10px;
     border-radius: 6px;
-    z-index: 1;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1f2937 transparent transparent transparent;
 }
 
 .tooltip b {
@@ -164,10 +245,20 @@ p {
     line-height: 35px;
 }
 
+.commands li {
+    z-index: 2;
+    display: inline-block;
+    cursor: pointer;
+    width: 45%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
 .commands li:hover .tooltip {
     display: block;
     opacity: 1;
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateX(-2%) translateY(-20%);
 }
  
 .commands .tooltip .star {
