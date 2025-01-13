@@ -4,6 +4,10 @@ This project is a website dedicated to the UselessBot Discord bot, which I devel
 
 Website: [https://uselessbotwebsite.netlify.app/](https://uselessbotwebsite.netlify.app/)
 
+<div align="center">
+  <img src="misc/UselessBotLogo.jpg" alt="Repository Picture" width="300">
+</div>
+
 ## License
 
 This project is licensed under MIT License - see the [LICENSE](LICENSE) file for details.
